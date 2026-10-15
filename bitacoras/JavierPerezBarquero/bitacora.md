@@ -1,5 +1,5 @@
 # Proyecto: Secretario Mudo IoT
-# Bitácora de: Diego González Oviedo
+# Bitácora de: Javier Pérez Barquero.
 
 ## Semana 1 - [12/10/2026] a [16/10/2026]
 
