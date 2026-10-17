@@ -11,7 +11,7 @@
 ### Avances
 - Proyecto definido y aprobado por el equipo.
 - Repositorio verificado y README principal revisado.
-- Commit: `a1b2c3d` - "Creación bitacora Diego"
+- Commit: `3b09d9bcf088878a414d1cfbabefac8378205eff` - "Creación bitacora Diego"
 
 ### Dificultades encontradas
 - Encontrar documentación clara sobre cómo conectar la pantalla LCD 16x2 al ESP32.
