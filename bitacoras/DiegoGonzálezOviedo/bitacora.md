@@ -1,7 +1,7 @@
 # Proyecto: Secretario Mudo IoT
 # Bitácora de: Diego González
 
-## Semana 1 - 15/10/2026
+## Semana 1 - [12/10/2026] a [16/10/2026]
 
 ### Actividades realizadas
 - Reunión de equipo para definir el proyecto "Secretario Mudo IoT".
