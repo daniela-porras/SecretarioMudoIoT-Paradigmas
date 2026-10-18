@@ -1,5 +1,5 @@
 # Proyecto: Secretario Mudo IoT
-# Bitácora de: Carlos Gómez
+# Bitácora de: Diego González
 
 ## Semana 1 - 15/10/2026
 
