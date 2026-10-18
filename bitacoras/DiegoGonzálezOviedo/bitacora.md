@@ -6,12 +6,12 @@
 ### Actividades realizadas
 - Reunión de equipo para definir el proyecto "Secretario Mudo IoT".
 - Investigación sobre los componentes necesarios (ESP32, DHT11, pantalla LCD I2C).
-- Revisión de la estructura del repositorio creado por mi compañero Juan Pérez.
+- Revisión de la estructura del repositorio creado por mi compañero Daniela Porras.
 
 ### Avances
 - Proyecto definido y aprobado por el equipo.
 - Repositorio verificado y README principal revisado.
-- Commit: `3b09d9bcf088878a414d1cfbabefac8378205eff` - "Creación bitacora Diego"
+- Commit: `3b09d9bcf088878a414d1cfbabefac8378205eff` - ""
 
 ### Dificultades encontradas
 - Encontrar documentación clara sobre cómo conectar la pantalla LCD 16x2 al ESP32.
