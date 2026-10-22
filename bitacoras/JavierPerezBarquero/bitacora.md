@@ -37,3 +37,78 @@
 - Instalar Arduino IDE en mi computadora.
 - Investigar cómo sincronizar la hora por NTP con el ESP32.
 - Revisar el datasheet del sensor DHT11 para su integración.
+
+
+
+# Proyecto: Secretario Mudo IoT
+# Bitácora de: Javier Pérez Barquero
+
+## Semana 2 - [19/10/2026] a [23/10/2026]
+
+## Sábado 17/10/2026
+
+### Actividades realizadas
+- Armado y cableado del circuito en el protoboard.
+- Pruebas de voltaje y conexión de todos los sensores al ESP32.
+- Apoyo en las pruebas de integración física.
+
+### Avances
+- Circuito base armado y verificado.
+
+### Dificultades encontradas
+- Al conectar múltiples sensores, el cableado era difícil de rastrear.
+- El ESP32 se apagaba al probar el Wi-Fi.
+
+### Soluciones implementadas
+- Ordené los cables por colores para facilitar la depuración.
+- Ayudé a descartar problemas de cableado y confirmamos que el ESP32 no soportaba el pico de corriente.
+
+### Decisiones técnicas
+- Se utilizó el paradigma imperativo para estructurar las pruebas paso a paso.
+
+### Pruebas efectuadas
+- Prueba de continuidad y voltaje.
+- Prueba física de respuesta de los sensores.
+
+### Aprendizajes obtenidos
+- Aprendí la importancia de un cableado ordenado y cómo diagnosticar problemas de energía.
+
+### Próximos pasos
+- Preparar el protoboard para el cambio de microcontrolador.
+
+
+## Martes 20/10/2026
+
+### Actividades realizadas
+- Desmontaje del ESP32 y montaje del ESP8266MOD en el protoboard.
+- Re-mapeo del cableado hacia los nuevos pines junto a Diego.
+- Definición de la arquitectura de software para el Backend.
+
+### Avances
+- Migración física completada exitosamente.
+- Sensores operando en el nuevo módulo sin apagones.
+- Commit: `[Pendiente: hash]` - "Actualización de esquema de cableado para ESP8266"
+
+### Dificultades encontradas
+- La distribución de pines era diferente, requirió mover casi todo.
+- Definir qué base de datos usar para el proyecto.
+
+### Soluciones implementadas
+- Dibujé el esquema de conexiones junto a Diego para validar el flujo eléctrico antes de encender.
+- **Me asignaron el desarrollo del Backend y la Base de Datos. Decidí investigar Python con SQLite por su facilidad para proyectos IoT.**
+
+### Decisiones técnicas
+- Evitar pines de arranque para los sensores.
+- Implementar un servidor local para recibir los datos del ESP8266.
+
+### Pruebas efectuadas
+- Prueba de encendido exitoso del ESP8266MOD.
+- Verificación física de la hora en la LCD.
+
+### Aprendizajes obtenidos
+- Aprendí a adaptar un circuito físico a un microcontrolador diferente.
+
+### Próximos pasos
+- Crear la estructura de la Base de Datos (tablas de temperatura y Pomodoro).
+- Investigar cómo crear una API básica con Python/Flask o Node.js en la carpeta `src/backend`.
+- Documentar el esquema eléctrico final para `hardware`.
