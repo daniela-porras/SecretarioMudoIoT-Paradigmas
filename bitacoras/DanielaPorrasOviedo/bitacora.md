@@ -87,7 +87,7 @@
 ### Avances
 - Proyecto migrado exitosamente al ESP8266MOD.
 - Wi-Fi, sincronización NTP y LCD funcionando.
-- Commit: `[Pendiente: hash]` - "Actualización de bitácora y validación de migración"
+- Commit: 61046e16d038a8821dc1bacf9336348591f1c494 - "Actualización de bitácora y validación de migración"
 
 ### Dificultades encontradas
 - Reorganizar el hardware y el software al mismo tiempo.
