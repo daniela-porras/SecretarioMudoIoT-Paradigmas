@@ -84,7 +84,7 @@
 ### Avances
 - Código adaptado y compilado exitosamente en el nuevo módulo.
 - Wi-Fi conectado, hora sincronizada y mostrada en la LCD.
-- Commit: `[Pendiente: hash]` - "Migración de código a ESP8266 y sincronización NTP"
+- Commit: `4fa8049d2b57d1394f1b9a525191a12d1159f375` - "Migración de código a ESP8266 y sincronización NTP"
 
 ### Dificultades encontradas
 - La distribución de pines cambió, requirió reasignar variables en el código.
