@@ -40,9 +40,6 @@
 
 
 
-# Proyecto: Secretario Mudo IoT
-# Bitácora de: Javier Pérez Barquero
-
 ## Semana 2 - [19/10/2026] a [23/10/2026]
 
 ## Sábado 17/10/2026
