@@ -37,3 +37,73 @@
 - Instalar Arduino IDE en mi computadora.
 - Investigar cómo sincronizar la hora por NTP con el ESP32.
 - Revisar el datasheet del sensor DHT11 para su integración.
+
+# Proyecto: Secretario Mudo IoT
+# Bitácora de: Diego González Oviedo
+
+## Sábado 17/10/2026
+
+### Actividades realizadas
+- Desarrollo de la estructura inicial del código aplicando el paradigma imperativo.
+- Colaboración con el equipo en el cableado y prueba de los sensores.
+- Pruebas de la función Wi-Fi para sincronización de hora (NTP).
+
+### Avances
+- Lógica del temporizador Pomodoro y visualización de datos funcionando.
+- Commit: `[Pendiente: hash]` - "Código base de sensores y temporizador"
+
+### Dificultades encontradas
+- El ESP32 entraba en bootloop al inicializar el Wi-Fi.
+
+### Soluciones implementadas
+- Revisamos el código en equipo y, mediante pruebas de descarte con el hardware, confirmamos que era una falla de corriente del ESP32.
+
+### Decisiones técnicas
+- Uso del paradigma imperativo para el control secuencial.
+- Concluir que debíamos cambiar de microcontrolador.
+
+### Pruebas efectuadas
+- Prueba de integración: DHT11 + LCD + Temporizador (Exitosa).
+- Prueba de conexión Wi-Fi en ESP32 (Fallida).
+
+### Aprendizajes obtenidos
+- Aprendí a diagnosticar fallas de hardware mediante la eliminación de variables.
+
+### Próximos pasos
+- Investigar en conjunto la migración al ESP8266MOD.
+
+---
+
+## Martes 20/10/2026
+
+### Actividades realizadas
+- Adaptación del código al ESP8266MOD en colaboración con Henry.
+- Reescritura de las funciones de red y del timer usando `millis()`.
+- Implementación de la sincronización NTP.
+
+### Avances
+- Código adaptado y compilado exitosamente en el nuevo módulo.
+- Wi-Fi conectado, hora sincronizada y mostrada en la LCD.
+- Commit: `[Pendiente: hash]` - "Migración de código a ESP8266 y sincronización NTP"
+
+### Dificultades encontradas
+- La distribución de pines cambió, requirió reasignar variables en el código.
+
+### Soluciones implementadas
+- Coordiné con Javier el nuevo mapeo de pines. Henry y yo ajustamos la zona horaria del servidor NTP.
+
+### Decisiones técnicas
+- Mantener el paradigma imperativo usando `millis()` para evitar bloqueos.
+- **Me asignaron el diseño de la carcasa (hardware) y la integración del envío de datos por HTTP para el backend.**
+
+### Pruebas efectuadas
+- Prueba de conexión Wi-Fi en ESP8266: Exitosa.
+- Prueba de sincronización: Hora exacta en la LCD.
+
+### Aprendizajes obtenidos
+- Adaptabilidad a nuevas arquitecturas de hardware.
+
+### Próximos pasos
+- Subir el código final `.ino` a la carpeta `src/arduino` de GitHub.
+- Diseñar y construir la carcasa/gabinete físico del Secretario Mudo.
+- Investigar cómo hacer peticiones HTTP (GET/POST) desde el ESP8266 hacia el servidor de Javier.
