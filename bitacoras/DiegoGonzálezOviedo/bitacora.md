@@ -38,9 +38,6 @@
 - Investigar cómo sincronizar la hora por NTP con el ESP32.
 - Revisar el datasheet del sensor DHT11 para su integración.
 
-# Proyecto: Secretario Mudo IoT
-# Bitácora de: Diego González Oviedo
-
 ## Sábado 17/10/2026
 
 ### Actividades realizadas
@@ -50,7 +47,7 @@
 
 ### Avances
 - Lógica del temporizador Pomodoro y visualización de datos funcionando.
-- Commit: `[Pendiente: hash]` - "Código base de sensores y temporizador"
+- Commit: `c068cd44454909e4291ef317790794d9b6fe2d58` - "Código Arduino V1"
 
 ### Dificultades encontradas
 - El ESP32 entraba en bootloop al inicializar el Wi-Fi.
@@ -84,7 +81,7 @@
 ### Avances
 - Código adaptado y compilado exitosamente en el nuevo módulo.
 - Wi-Fi conectado, hora sincronizada y mostrada en la LCD.
-- Commit: `4fa8049d2b57d1394f1b9a525191a12d1159f375` - "Migración de código a ESP8266 y sincronización NTP"
+- Commit: `4fa8049d2b57d1394f1b9a525191a12d1159f375` - "Código adaptado al esp8266MOD"
 
 ### Dificultades encontradas
 - La distribución de pines cambió, requirió reasignar variables en el código.
