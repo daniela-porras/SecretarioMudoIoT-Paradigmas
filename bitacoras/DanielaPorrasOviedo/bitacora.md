@@ -41,7 +41,7 @@
 - [Instalar Arduino IDE y configurar la placa ESP32]
 
 
-
+---
 
 ## Sábado 17/10/2026
 
