@@ -101,6 +101,5 @@
 - Adaptabilidad a nuevas arquitecturas de hardware.
 
 ### Próximos pasos
-- Subir el código final `.ino` a la carpeta `src/arduino` de GitHub.
 - Diseñar y construir la carcasa/gabinete físico del Secretario Mudo.
 - Investigar cómo hacer peticiones HTTP (GET/POST) desde el ESP8266 hacia el servidor de Javier.
