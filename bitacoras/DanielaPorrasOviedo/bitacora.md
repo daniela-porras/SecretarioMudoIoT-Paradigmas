@@ -39,3 +39,74 @@
 ### Próximos pasos
 - [Investigar el funcionamiento del sensor DHT11 y la pantalla LCD]
 - [Instalar Arduino IDE y configurar la placa ESP32]
+
+
+
+
+## Sábado 17/10/2026
+
+### Actividades realizadas
+- Trabajo en equipo para la integración de los sensores al ESP32.
+- Revisión conjunta del código base (paradigma imperativo).
+- Pruebas de funcionamiento del temporizador Pomodoro.
+
+### Avances
+- El ESP32 funcionó como cerebro central con todos los sensores.
+- Éxito en la lectura del DHT11 y el control del Pomodoro.
+
+### Dificultades encontradas
+- Al intentar activar el Wi-Fi, el ESP32 entró en un bucle de reinicio (bootloop).
+
+### Soluciones implementadas
+- Nos reunimos todo el equipo para analizar el problema. Tras revisar el código, concluimos que era un fallo físico (pico de corriente) del módulo Wi-Fi del ESP32.
+
+### Decisiones técnicas
+- Mantener el paradigma imperativo para la lógica de los sensores.
+- Investigar alternativas para la conectividad.
+
+### Pruebas efectuadas
+- Prueba de integración de sensores: Exitosa.
+- Prueba de conexión Wi-Fi: Fallida por apagón del ESP32.
+
+### Aprendizajes obtenidos
+- Comprendí que un error de hardware puede parecer un error de código; la importancia de aislar variables en equipo.
+
+### Próximos pasos
+- Reunión para evaluar el cambio de microcontrolador.
+- Investigar el módulo ESP8266MOD.
+
+---
+
+## Martes 20/10/2026
+
+### Actividades realizadas
+- Reunión de equipo para coordinar la migración del proyecto al ESP8266MOD.
+- Colaboración en la revisión de la adaptación del código.
+- Validación final de la función IoT y definición de la arquitectura Web/IoT.
+
+### Avances
+- Proyecto migrado exitosamente al ESP8266MOD.
+- Wi-Fi, sincronización NTP y LCD funcionando.
+- Commit: `[Pendiente: hash]` - "Actualización de bitácora y validación de migración"
+
+### Dificultades encontradas
+- Reorganizar el hardware y el software al mismo tiempo.
+- Definir cómo se comunicará el ESP8266 con la página web.
+
+### Soluciones implementadas
+- Trabajamos en bloque: Javier ajustó el hardware, Diego y Henry adaptaron el código, y yo validé que la integración general no perdiera funciones.
+
+### Decisiones técnicas
+- Adoptar el ESP8266MOD y mantener el paradigma imperativo usando `millis()`.
+- **División de roles para la fase final: Me asignaron el desarrollo del Frontend (Página Web) y la documentación en el README.**
+
+### Pruebas efectuadas
+- Prueba de integración total: Sensores + Wi-Fi + Pantalla sin apagones.
+
+### Aprendizajes obtenidos
+- La comunicación asertiva en equipo es vital en la ingeniería.
+
+### Próximos pasos
+- Investigar frameworks de CSS (como Bootstrap) para el diseño del Dashboard Web.
+- Crear la estructura base de la página web en `src/web`.
+- Coordinar con Javier (Backend) cómo se van a consumir los datos de la Base de Datos.
