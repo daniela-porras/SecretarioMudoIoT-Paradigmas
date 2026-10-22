@@ -84,7 +84,7 @@
 ### Avances
 - Migración física completada exitosamente.
 - Sensores operando en el nuevo módulo sin apagones.
-- Commit: `[Pendiente: hash]` - "Actualización de esquema de cableado para ESP8266"
+- Commit: `ddf1acd5c605ff4baca06ed5565b7ae7ca1ce9e4` - "Actualización de esquema de cableado para ESP8266"
 
 ### Dificultades encontradas
 - La distribución de pines era diferente, requirió mover casi todo.
