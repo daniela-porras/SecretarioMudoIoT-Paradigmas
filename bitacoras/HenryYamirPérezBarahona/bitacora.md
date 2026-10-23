@@ -37,3 +37,70 @@
 - Instalar Arduino IDE en mi computadora.
 - Investigar cómo sincronizar la hora por NTP con el ESP32.
 - Revisar el datasheet del sensor DHT11 para su integración.
+
+---
+
+## Sábado 17/10/2026
+
+### Actividades realizadas
+- Investigación y revisión de las librerías de los sensores (DHT11, LCD I2C).
+- Apoyo directo en la revisión del código (paradigma imperativo).
+- Pruebas de lectura de datos en el monitor serial.
+
+### Avances
+- Se identificaron y resolvieron conflictos entre librerías.
+- Verificación del correcto funcionamiento lógico del temporizador.
+
+### Dificultades encontradas
+- El ESP32 se reiniciaba abruptamente al intentar conectar el Wi-Fi.
+
+### Soluciones implementadas
+- Descartamos errores de programación y confirmamos junto a Javier que era un problema de consumo eléctrico.
+
+### Decisiones técnicas
+- Se mantuvo el paradigma imperativo para estructurar la lógica.
+- Se acordó investigar el ESP8266MOD como alternativa.
+
+### Pruebas efectuadas
+- Prueba de monitor serial: Verificación de datos del DHT11.
+
+### Aprendizajes obtenidos
+- Aprendí a leer el monitor serial y a diferenciar errores de código de fallas de hardware.
+
+### Próximos pasos
+- Investigar la documentación del ESP8266MOD y sus librerías Wi-Fi.
+
+---
+
+## Martes 20/10/2026
+
+### Actividades realizadas
+- Investigación sobre la librería `ESP8266WiFi.h` y el protocolo NTP.
+- Apoyo en la reescritura del código para el nuevo microcontrolador.
+- Documentación técnica de la migración y diseño de la arquitectura del sistema.
+
+### Avances
+- Código adaptado para el ESP8266MOD con conexión Wi-Fi exitosa.
+- Commit: `f35ed1826b6ade8f427b9fbbcebee98157e4bc1f` - "Documentación técnica de migración a ESP8266"
+
+### Dificultades encontradas
+- La zona horaria por defecto no era la de Costa Rica.
+- Definir cómo interactúa el hardware con la base de datos y la web.
+
+### Soluciones implementadas
+- Ajustamos el huso horario (offset UTC) en el código junto a Diego.
+- **Me asignaron el diseño del diagrama de arquitectura (incluyendo el flujo IoT) y la búsqueda de referencias en IEEE.**
+
+### Decisiones técnicas
+- Uso de NTP por su precisión. Mantener la estructura imperativa.
+
+### Pruebas efectuadas
+- Prueba de sincronización: Hora exacta en la LCD.
+
+### Aprendizajes obtenidos
+- Comprendí el protocolo NTP y cómo documentar los cambios de hardware.
+
+### Próximos pasos
+- Diseñar el diagrama de arquitectura (ESP8266 -> Backend -> DB -> Web) y subirlo a `docs`.
+- Documentar las pruebas en la carpeta `tests`.
+- Buscar artículos académicos sobre IoT y Pomodoro para las referencias del artículo.
