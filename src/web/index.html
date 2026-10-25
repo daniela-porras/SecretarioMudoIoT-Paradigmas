@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secretario Mudo · Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<header class="cabecera">
+  <div>
+    <h1>Secretario Mudo</h1>
+    <p class="conexion"><span class="dot" id="dotConexion"></span><span id="estado">Conectando con el servidor…</span></p>
+  </div>
+  <button id="btnDemo" class="btn">Cargar datos de prueba</button>
+</header>
+
+<nav class="filtros" aria-label="Periodo a mostrar">
+  <div class="seg" id="seg">
+    <button data-f="hoy">Hoy</button>
+    <button data-f="7d">Última semana</button>
+    <button data-f="30d">Último mes</button>
+    <button data-f="todo">Todo</button>
+  </div>
+  <label class="campo">Época de estudio
+    <select id="selEpoca"></select>
+  </label>
+  <p class="periodo" id="periodo"></p>
+</nav>
+
+<main class="grid">
+
+  <!-- Estado general -->
+  <section class="card estado s12" id="interp" data-nivel="sin_datos" aria-live="polite">
+    <p class="badge"><span class="dot"></span><span id="iNivel">Analizando</span></p>
+    <h2 id="iTitulo">Analizando tus datos…</h2>
+    <details class="detalle">
+      <summary>
+        <span class="mas">Ver más detalles</span><span class="menos">Ver menos</span>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <ul id="iPuntos"></ul>
+      <p class="consejo" id="iConsejo"></p>
+    </details>
+    <div class="vistazo" id="vistazo" aria-label="Resumen rápido"></div>
+  </section>
+
+  <!-- Ahora mismo -->
+  <div class="seccion s12">
+    <h2>Ahora mismo</h2>
+    <p class="pill" id="ahoraPill"><span class="dot" id="led"></span><span id="ahoraTxt">Sin lecturas</span></p>
+    <p class="nota" id="ultima"></p>
+  </div>
+  <article class="card tile s4"><h3>Temperatura</h3><p class="valor"><span id="tNow">–</span><small>°C</small></p></article>
+  <article class="card tile s4"><h3>Humedad</h3><p class="valor"><span id="hNow">–</span><small>%</small></p></article>
+  <article class="card tile s4"><h3>Luz del ambiente</h3><p class="valor"><span id="lNow">–</span><small>de 1023</small></p></article>
+
+  <!-- Resultados del periodo -->
+  <div class="seccion s12"><h2>Resultados del periodo</h2></div>
+  <article class="card kpi s3">
+    <h3>Minutos de foco</h3>
+    <p class="valor"><span id="kFoco">–</span><small>min</small></p>
+    <p class="delta" id="dFoco"></p>
+    <p class="sub" id="kFocoSub">Pomodoros completados</p>
+  </article>
+  <article class="card kpi s3">
+    <h3>Pomodoros terminados</h3>
+    <p class="valor"><span id="kTasa">–</span><small>%</small></p>
+    <p class="delta" id="dTasa"></p>
+    <p class="sub" id="kTasaSub">Sin interrumpir</p>
+  </article>
+  <article class="card kpi s3">
+    <h3>Clima confortable</h3>
+    <p class="valor"><span id="kConfort">–</span><small>%</small></p>
+    <p class="delta" id="dConfort"></p>
+    <p class="sub">Del tiempo entre 20–26 °C y 40–60 % de humedad</p>
+  </article>
+  <article class="card kpi s3">
+    <h3>Pomodoros iniciados</h3>
+    <p class="valor"><span id="kPom">–</span></p>
+    <p class="delta" id="dPom"></p>
+    <p class="sub">En el periodo seleccionado</p>
+  </article>
+
+  <!-- Gráficos -->
+  <div class="seccion s12"><h2>Detalle</h2></div>
+  <article class="card grafico s8">
+    <h3>Minutos de foco por día</h3>
+    <p class="sub">Solo cuenta los pomodoros terminados.</p>
+    <div class="chart"><canvas id="cDia"></canvas></div>
+  </article>
+  <article class="card grafico s4">
+    <h3>Pomodoros por duración</h3>
+    <p class="sub">Terminados frente a interrumpidos.</p>
+    <div class="chart"><canvas id="cDur"></canvas></div>
+  </article>
+  <article class="card grafico s12">
+    <h3>Temperatura y humedad</h3>
+    <p class="sub">Se agrupa por hora o por día cuando el periodo es largo.</p>
+    <div class="chart alto"><canvas id="cClima"></canvas></div>
+  </article>
+  <article class="card grafico s6">
+    <h3>¿Ayuda el ambiente a concentrarte?</h3>
+    <p class="sub">Pomodoros terminados según la temperatura al empezar.</p>
+    <div class="chart"><canvas id="cEfecto"></canvas></div>
+  </article>
+  <article class="card grafico s6">
+    <h3>Luz del ambiente</h3>
+    <p class="sub">Lectura del sensor, de 0 (oscuro) a 1023 (muy claro).</p>
+    <div class="chart"><canvas id="cLuz"></canvas></div>
+  </article>
+
+  <!-- Épocas de estudio -->
+  <details class="card epocas s12" id="epocasPanel">
+    <summary>Épocas de estudio (parciales, proyectos, exámenes finales…)</summary>
+    <p class="sub">Una época es un rango de fechas con nombre. Al elegirla, todo el panel muestra solo ese periodo, y la tabla te deja compararlas.</p>
+    <form id="formEpoca" class="formEpoca">
+      <label class="campo">Nombre <input id="eNombre" required maxlength="40" placeholder="Ej. Parciales II ciclo"></label>
+      <label class="campo">Desde <input id="eInicio" type="date" required></label>
+      <label class="campo">Hasta <input id="eFin" type="date" required></label>
+      <button class="btn" type="submit">Guardar época</button>
+    </form>
+    <p class="error" id="eError" role="alert"></p>
+    <div class="tabla">
+      <table>
+        <thead><tr><th>Época</th><th>Fechas</th><th>Foco (min)</th><th>Terminados</th><th>Temp. prom.</th><th></th></tr></thead>
+        <tbody id="tbEpocas"></tbody>
+      </table>
+    </div>
+  </details>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
