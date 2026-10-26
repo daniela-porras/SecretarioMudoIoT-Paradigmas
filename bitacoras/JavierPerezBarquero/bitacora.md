@@ -125,7 +125,7 @@
 - Servidor local funcionando correctamente y guardando datos en la base de datos.
 - El panel web básico logró mostrar los primeros gráficos con datos de prueba.
 - Documento de guía de conexión redactado.
-- Commit: `[Pendiente: hash]` - "Desarrollo de Backend, rama de pruebas y Guía de Conexión"
+- Commit: `6b69b5faf780b1234a74e86110273f7b1dc0e117` - "Desarrollo de Backend, rama de pruebas y Guía de Conexión"
 
 ### Dificultades encontradas
 - Entender cómo configurar Flask para que sirviera los archivos estáticos (HTML/CSS) al mismo tiempo que la API.
