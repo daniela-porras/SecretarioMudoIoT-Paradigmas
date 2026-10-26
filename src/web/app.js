@@ -204,15 +204,22 @@ async function cargarEpocas() {
   tb.innerHTML = epocas.map(e => `<tr>
     <td>${esc(e.nombre)}</td><td>${e.inicio} a ${e.fin}</td><td>${e.minutos_foco}</td>
     <td>${e.pomodoros ? e.tasa + " %" : "–"}</td><td>${e.temp != null ? e.temp.toFixed(1) + " °C" : "–"}</td>
-    <td><button class="btn" data-ver="${e.id}">Ver</button><button class="btn" data-del="${e.id}">Eliminar</button></td></tr>`).join("");
+    <td><button class="btn-icon" data-ver="${e.id}" title="Ver detalles"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+    <button class="btn-icon" data-del="${e.id}" title="Eliminar época"><i class="fa-solid fa-trash"></i></button></td></tr>`).join("");
 }
 $("selEpoca").onchange = ev => {
   const e = epocas.find(x => String(x.id) === ev.target.value);
   if (e) verEpoca(e); else document.querySelector('#seg [data-f="todo"]').click();
 };
 $("tbEpocas").onclick = async ev => {
-  const ver = ev.target.dataset.ver, del = ev.target.dataset.del;
-  if (ver) { verEpoca(epocas.find(x => String(x.id) === ver)); window.scrollTo({ top: 0, behavior: "smooth" }); }
+  const btn = ev.target.closest('button');
+  if (!btn) return; 
+
+  const ver = btn.dataset.ver, del = btn.dataset.del;
+  if (ver) { 
+    verEpoca(epocas.find(x => String(x.id) === ver)); 
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
+  }
   if (del && confirm("¿Eliminar esta época? Los datos registrados no se borran.")) {
     await fetch(API + "/api/epocas/" + del, { method: "DELETE" });
     if (filtro.key === "epoca:" + del) document.querySelector('#seg [data-f="todo"]').click();

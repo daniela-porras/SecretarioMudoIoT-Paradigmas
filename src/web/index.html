@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Secretario Mudo · Panel</title>
+<title>Secretario Mudo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,7 +15,7 @@
 
 <header class="cabecera">
   <div>
-    <h1>Secretario Mudo</h1>
+    <h1>Secretario Mudo · Panel de Control</h1>
     <p class="conexion"><span class="dot" id="dotConexion"></span><span id="estado">Conectando con el servidor…</span></p>
   </div>
   <button id="btnDemo" class="btn">Cargar datos de prueba</button>
@@ -56,32 +57,32 @@
     <p class="pill" id="ahoraPill"><span class="dot" id="led"></span><span id="ahoraTxt">Sin lecturas</span></p>
     <p class="nota" id="ultima"></p>
   </div>
-  <article class="card tile s4"><h3>Temperatura</h3><p class="valor"><span id="tNow">–</span><small>°C</small></p></article>
-  <article class="card tile s4"><h3>Humedad</h3><p class="valor"><span id="hNow">–</span><small>%</small></p></article>
-  <article class="card tile s4"><h3>Luz del ambiente</h3><p class="valor"><span id="lNow">–</span><small>de 1023</small></p></article>
+  <article class="card tile s4"><h3><i class="fa-solid fa-temperature-half" style="color: #e8710a;"></i> Temperatura</h3><p class="valor"><span id="tNow">–</span><small>°C</small></p></article>
+  <article class="card tile s4"><h3><i class="fa-solid fa-droplet" style="color: #1a73e8;"></i> Humedad</h3><p class="valor"><span id="hNow">–</span><small>%</small></p></article>
+  <article class="card tile s4"><h3><i class="fa-solid fa-sun" style="color: #fbbc04;"></i> Luz del ambiente</h3><p class="valor"><span id="lNow">–</span><small>de 1023</small></p></article>
 
   <!-- Resultados del periodo -->
   <div class="seccion s12"><h2>Resultados del periodo</h2></div>
   <article class="card kpi s3">
-    <h3>Minutos de foco</h3>
+    <h3><i class="fa-solid fa-brain" style="color: #188038;"></i> Minutos de foco</h3>
     <p class="valor"><span id="kFoco">–</span><small>min</small></p>
     <p class="delta" id="dFoco"></p>
     <p class="sub" id="kFocoSub">Pomodoros completados</p>
   </article>
   <article class="card kpi s3">
-    <h3>Pomodoros terminados</h3>
+    <h3><i class="fa-solid fa-check-circle" style="color: #1a73e8;"></i> Pomodoros terminados</h3>
     <p class="valor"><span id="kTasa">–</span><small>%</small></p>
     <p class="delta" id="dTasa"></p>
     <p class="sub" id="kTasaSub">Sin interrumpir</p>
   </article>
   <article class="card kpi s3">
-    <h3>Clima confortable</h3>
+    <h3><i class="fa-solid fa-leaf" style="color: #188038;"></i> Clima confortable</h3>
     <p class="valor"><span id="kConfort">–</span><small>%</small></p>
     <p class="delta" id="dConfort"></p>
     <p class="sub">Del tiempo entre 20–26 °C y 40–60 % de humedad</p>
   </article>
   <article class="card kpi s3">
-    <h3>Pomodoros iniciados</h3>
+    <h3><i class="fa-solid fa-clock" style="color: #b06000;"></i> Pomodoros iniciados</h3>
     <p class="valor"><span id="kPom">–</span></p>
     <p class="delta" id="dPom"></p>
     <p class="sub">En el periodo seleccionado</p>
