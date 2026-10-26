@@ -109,3 +109,44 @@
 - Crear la estructura de la Base de Datos (tablas de temperatura y Pomodoro).
 - Investigar cómo crear una API básica con Python/Flask o Node.js en la carpeta `src/backend`.
 - Documentar el esquema eléctrico final para `hardware`.
+
+
+## Sábado 24/10/2026
+
+### Actividades realizadas
+- Diseño y creación de la Base de Datos (SQLite) para guardar lecturas y Pomodoros.
+- Desarrollo del Backend utilizando Python y Flask.
+- Creación de los endpoints (API) para recibir datos del ESP8266.
+- Creación de la rama `feature/desarrolloBackFront` en Git para trabajar de forma segura.
+- Desarrollo de una interfaz Frontend básica (HTML/JS) para probar la comunicación con el servidor.
+- Redacción y diseño de la "Guía de Conexión paso a paso" para el usuario final.
+
+### Avances
+- Servidor local funcionando correctamente y guardando datos en la base de datos.
+- El panel web básico logró mostrar los primeros gráficos con datos de prueba.
+- Documento de guía de conexión redactado.
+- Commit: `[Pendiente: hash]` - "Desarrollo de Backend, rama de pruebas y Guía de Conexión"
+
+### Dificultades encontradas
+- Entender cómo configurar Flask para que sirviera los archivos estáticos (HTML/CSS) al mismo tiempo que la API.
+- Diseñar la estructura de la base de datos para que soportara tanto las lecturas ambientales como los registros del Pomodoro.
+
+### Soluciones implementadas
+- Se configuró correctamente la ruta del servidor para servir la carpeta `web`.
+- Se definieron tablas relacionales en SQLite para separar los datos de sensores y los tiempos de estudio.
+
+### Decisiones técnicas
+- Se optó por Flask por su ligereza y facilidad para crear APIs REST rápidamente.
+- Se decidió crear la rama `feature/desarrolloBackFront` para no afectar el código principal (main) mientras se hacían las pruebas de integración.
+- Se usó SQLite por ser una base de datos local ideal para proyectos IoT.
+
+### Pruebas efectuadas
+- Prueba de API: Envío de datos falsos (POST) y verificación de recepción en la base de datos.
+
+### Aprendizajes obtenidos
+- Aprendí a conectar un backend en Python con un frontend en JavaScript usando peticiones HTTP.
+- Comprendí la importancia de aislar el entorno de pruebas usando ramas en Git.
+
+### Próximos pasos
+- Entregar el frontend base a Daniela para que ella se encargue del diseño final (UI/UX).
+- Documentar la arquitectura del sistema para el artículo y el repositorio.
