@@ -110,3 +110,41 @@
 - Investigar frameworks de CSS (como Bootstrap) para el diseño del Dashboard Web.
 - Crear la estructura base de la página web en `src/web`.
 - Coordinar con Javier (Backend) cómo se van a consumir los datos de la Base de Datos.
+
+---
+
+## Lunes 26/10/2026
+
+### Actividades realizadas
+- Mejora y finalización del Frontend (Panel Web) sobre la base creada por Javier.
+- Implementación de mejoras visuales (UI/UX) con CSS, sombras, iconos (FontAwesome) y diseño responsivo.
+- Integración de gráficos interactivos con Chart.js.
+- Corrección de bugs en la lógica de eventos de JavaScript.
+
+### Avances
+- Panel web con diseño "Premium" totalmente funcional (probado con datos simulados).
+- Corrección de la lógica de eventos en los botones de la tabla de Épocas.
+- Commit: ebb9628a9b3b16fb7c473d8e9e16ccf0acffbd09 - "Mejora de UI: Tabla de épocas, iconos y fix de clics"
+
+### Dificultades encontradas
+- Los botones con iconos en la tabla de épocas no respondían al hacer clic (bug de JavaScript).
+
+### Soluciones implementadas
+- Se solucionó el bug usando la función `closest('button')` en JavaScript para detectar el clic sin importar si se presionaba el icono o el fondo.
+
+### Decisiones técnicas
+- Mantener los cambios en la rama `feature/desarrolloBackFront` (creada por Javier) hasta que la conexión física con el ESP8266 sea 100% estable, antes de fusionarla con la `main`.
+
+### Pruebas efectuadas
+- Prueba de navegación móvil: El panel se adapta correctamente a pantallas de celular.
+- Prueba de UI con datos simulados: Los gráficos y la tabla responden bien a los filtros.
+
+### Aprendizajes obtenidos
+- Reforcé mis conocimientos en manipulación del DOM (JavaScript) para crear interfaces dinámicas e interactivas.
+
+### Próximos pasos
+- Subir la Guía de Conexión (creada por Javier) a la carpeta `docs` del repositorio.
+- **Preparar el entorno para la prueba de integración del día martes junto a Diego.**
+- Iniciar la redacción del artículo de investigación (Introducción y Planteamiento del Problema).
+
+---
