@@ -104,3 +104,37 @@
 - Diseñar el diagrama de arquitectura (ESP8266 -> Backend -> DB -> Web) y subirlo a `docs`.
 - Documentar las pruebas en la carpeta `tests`.
 - Buscar artículos académicos sobre IoT y Pomodoro para las referencias del artículo.
+
+---
+
+## Miércoles 28/10/2026
+
+### Actividades realizadas
+- Elaboración del diagrama de flujo general del proyecto "Secretario Mudo IoT".
+- Análisis del funcionamiento completo del sistema para representar gráficamente sus procesos, decisiones y secuencia de ejecución.
+- Incorporación del diagrama de flujo al repositorio de GitHub como parte de la documentación del proyecto.
+
+### Avances
+- Diagrama de flujo general finalizado, representando el funcionamiento completo del sistema.
+- Documentación visual incorporada al repositorio de GitHub para facilitar la comprensión de la lógica del proyecto.
+
+### Dificultades encontradas
+- Organizar correctamente los procesos y las decisiones del sistema para representar de forma clara su funcionamiento.
+
+### Soluciones implementadas
+- Se revisó la lógica del programa para identificar y organizar las operaciones principales antes de representarlas en el diagrama de flujo.
+
+### Decisiones técnicas
+- Se utilizó un diagrama de flujo para documentar visualmente la lógica general del sistema y facilitar su comprensión.
+
+### Pruebas efectuadas
+- Revisión del diagrama de flujo para verificar que la secuencia representada correspondiera con el funcionamiento del programa.
+
+### Aprendizajes obtenidos
+- Reforcé mis conocimientos sobre la representación gráfica de algoritmos y procesos.
+- Comprendí la importancia de documentar el funcionamiento de un sistema IoT para facilitar su mantenimiento y futuras modificaciones.
+
+### Próximos pasos
+- Dar seguimiento a las modificaciones y mejoras pendientes del código.
+- Apoyar en las actividades correspondientes al Sprint.
+- Colaborar con la planificación y publicación del proyecto en la web.
