@@ -164,7 +164,7 @@
 ### Avances
 - Sensor LDR eliminado de los cuatro archivos, sin referencias restantes. El backend ignora el campo `luz` si un firmware viejo todavía lo envía.
 - 20 pruebas automáticas funcionando y aprobadas en mi computadora.
-- Commit: `[pendiente: agregar hash]` - "Eliminación del sensor LDR y creación de pruebas automáticas"
+- Commit: `1c62daa8e72b60e2321eb8133c98c4da088ab55e` - "Eliminación del sensor LDR y creación de pruebas automáticas"
 
 ### Dificultades encontradas
 - El sensor LDR generaba problemas constantes.
