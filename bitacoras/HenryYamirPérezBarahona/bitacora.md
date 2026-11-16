@@ -136,5 +136,49 @@
 
 ### Próximos pasos
 - Dar seguimiento a las modificaciones y mejoras pendientes del código.
-- Apoyar en las actividades correspondientes al Sprint.
 - Colaborar con la planificación y publicación del proyecto en la web.
+
+### Lunes 16/11/2026
+
+**Actividades realizadas**
+- Revisión y modificación del diagrama de flujo general del proyecto "Secretario Mudo IoT".
+- Análisis de las observaciones del equipo sobre las dificultades presentadas durante las pruebas con el sensor LDR.
+- Revisión y complementación del artículo científico del proyecto.
+- Elaboración de mejoras para las secciones de resultados, discusión y conclusiones del artículo.
+
+**Avances**
+- Código PlantUML del diagrama de flujo modificado para eliminar los procesos relacionados con el sensor LDR.
+- Diagrama actualizado para representar el funcionamiento del dispositivo sin el sensor de luz ambiental.
+- Se revisó y amplió el contenido de las secciones de resultados, discusión y conclusiones del artículo científico.
+- Se incorporó en la discusión la justificación técnica de la decisión de excluir el sensor LDR.
+
+**Dificultades encontradas**
+- Necesidad de ajustar la documentación del proyecto debido a los cambios realizados en los componentes y funcionalidades del prototipo.
+- Identificación de información que necesitaba mayor desarrollo en el artículo científico, especialmente en la interpretación de los resultados y las limitaciones del proyecto.
+
+**Soluciones implementadas**
+- Se modificó el código del diagrama de flujo para eliminar las decisiones y acciones relacionadas con la iluminación ambiental.
+- Se revisaron y complementaron las secciones del artículo científico para mantener la coherencia entre la documentación y el funcionamiento real del prototipo.
+- Se explicó la exclusión del LDR debido a las interferencias identificadas durante las pruebas de integración.
+
+**Decisiones técnicas**
+- Se acordó excluir definitivamente el sensor LDR del proyecto.
+- Se mantuvo el sensor DHT11 para el monitoreo de temperatura y humedad.
+- Se conservaron los indicadores LED según los estados del temporizador: verde para FOCO, rojo para DESCANSO y apagado para REPOSO.
+- Se decidió mantener en el artículo únicamente las funcionalidades que forman parte de la implementación del sistema.
+
+**Pruebas efectuadas**
+- Revisión del código PlantUML para comprobar la eliminación de los procesos relacionados con el LDR.
+- Verificación de la coherencia entre las funciones descritas en el artículo y las características del prototipo desarrollado.
+
+**Aprendizajes**
+- Comprendí la importancia de mantener actualizados los diagramas y documentos técnicos cuando se realizan cambios en el diseño de un proyecto.
+- Reforcé mis conocimientos sobre la documentación científica y la importancia de relacionar los resultados obtenidos con los objetivos establecidos.
+- Comprendí la necesidad de justificar las decisiones técnicas y reconocer las limitaciones durante el desarrollo de un proyecto IoT.
+
+**Próximos pasos**
+- Finalizar la revisión del artículo científico y completar las secciones pendientes.
+- Incorporar fotografías del prototipo físico y capturas del panel web.
+- Compartir el artículo con los integrantes del equipo para recibir observaciones.
+- Actualizar la documentación del proyecto en GitHub.
+- Preparar los materiales necesarios para la exposición del proyecto.
