@@ -150,3 +150,45 @@
 ### Próximos pasos
 - Entregar el frontend base a Daniela para que ella se encargue del diseño final (UI/UX).
 - Documentar la arquitectura del sistema para el artículo y el repositorio.
+
+
+
+
+## Lunes 16/11/2026
+
+### Actividades realizadas
+- Eliminación del sensor LDR (luz del ambiente) de todo el código: firmware (`.ino`), backend (`app.py`) y panel web (`index.html` y `app.js`).
+- Creación de pruebas automáticas para validar las partes más importantes del backend y del firmware.
+- Ejecución, corrección y validación de las pruebas.
+
+### Avances
+- Sensor LDR eliminado de los cuatro archivos, sin referencias restantes. El backend ignora el campo `luz` si un firmware viejo todavía lo envía.
+- 20 pruebas automáticas funcionando y aprobadas en mi computadora.
+- Commit: `[pendiente: agregar hash]` - "Eliminación del sensor LDR y creación de pruebas automáticas"
+
+### Dificultades encontradas
+- El sensor LDR generaba problemas constantes.
+- Dos pruebas del firmware fallaron al inicio porque leían el `.ino` equivocado (el de la carpeta `esp32_antiguo`, que aún tenía el LDR).
+
+### Soluciones implementadas
+- Se quitó el LDR de todo el código, el LED RGB quedó con brillo fijo.
+- Se fijó en las pruebas la ruta exacta del `.ino` correcto.
+
+### Decisiones técnicas
+- Eliminar el LDR por completo.
+- Mantener compatibilidad: el backend no falla si recibe datos de luz de un firmware antiguo.
+- Usar bases de datos temporales en las pruebas para no modificar `secretario.db`.
+- Usar `unittest` de Python, sin instalar librerías adicionales.
+
+### Pruebas efectuadas
+- **Creación:** pruebas del backend (API, estadísticas, épocas y datos demo) y del firmware (rutas, campos del JSON y que no quede código del LDR).
+- **Ejecución:** corridas en mi computadora; al inicio fallaron 2 pruebas del firmware.
+- **Corrección:** se identificó la causa (archivo `.ino` equivocado) y se corrigió la ruta, se reorganizaron y redujeron las pruebas.
+- **Validación:** resultado final de 20 pruebas aprobadas. También se comprobó que detectan errores al dañar el código a propósito.
+
+### Aprendizajes obtenidos
+- Eliminar un sensor implica modificar el firmware, el backend y el panel web a la vez.
+- Las pruebas automáticas ayudan a detectar errores y a evitar que el LDR vuelva a aparecer por accidente.
+
+### Próximos pasos
+- Poner la IP real de la computadora en `SERVER_URL` del `.ino`.
