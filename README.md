@@ -34,7 +34,7 @@ Se utilizó el **Paradigma Imperativo** para el desarrollo del código del micro
 
 ## Instrucciones de Ejecución
 Para ver el paso a paso detallado (desde instalar el Arduino IDE hasta conectar la placa al servidor), consulta nuestra guía completa aquí:
-**[Descargar Guía de Conexión (PDF)](./docs/Guia_Conexion_Secretario_Mudo.docx)**
+**[Descargar Guía de Conexión (PDF)](./docs/Guia_Conexion_Secretario_Mudo.pdf)**
 
 ## Integrantes
 - Daniela Porras Oviedo
