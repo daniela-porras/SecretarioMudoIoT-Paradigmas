@@ -151,7 +151,7 @@
 - Diagrama actualizado para representar el funcionamiento del dispositivo sin el sensor de luz ambiental.
 - Se revisó y amplió el contenido de las secciones de resultados, discusión y conclusiones del artículo científico.
 - Se incorporó en la discusión la justificación técnica de la decisión de excluir el sensor LDR.
-- Commit: `85911f062eae3538eedaf6130badff054244d06b` - "Actualizar diagrama de flujo y eliminar sensor LDR"
+- Commit: `85911f062eae3538eedaf6130badff054244d06b` - "Agregar archivos mediante carga"
 
 **Dificultades encontradas**
 - Necesidad de ajustar la documentación del proyecto debido a los cambios realizados en los componentes y funcionalidades del prototipo.
