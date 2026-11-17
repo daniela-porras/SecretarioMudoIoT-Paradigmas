@@ -249,3 +249,41 @@
 - Exportar el artículo final a PDF y revisar el formato IEEE de dos columnas.
 
 ---
+
+## Martes 17/11/2026 (Cierre del Proyecto)
+
+### Actividades realizadas
+- **Cierre total de los pendientes de la fase de integración y documentación.**
+- Subida del archivo de código final (`secretario_mudo_esp8266.ino`) al repositorio de GitHub, tras la revisión y corrección de Javier (eliminación del LDR).
+- Revisión exhaustiva de diagramas, fotos y la carcasa 3D para **confirmar la ausencia total de referencias al LDR**.
+- Inserción de las figuras reales del prototipo físico y del panel web en el documento del artículo.
+- Exportación final del artículo a PDF con el formato IEEE de dos columnas.
+- Prueba de los enlaces del `README.md` en una ventana de incógnito para verificar su correcto funcionamiento en la web.
+
+### Avances
+- **Repositorio actualizado y 100% sincronizado** con el hardware final (sin LDR).
+- El artículo de investigación se encuentra completamente redactado, con figuras y **exportado en formato PDF IEEE**.
+- Se comprobó que el enlace de la Guía de Conexión en el README funciona perfectamente.
+- **Proyecto listo para su entrega y evaluación final.**
+
+### Dificultades encontradas
+- Ninguna dificultad técnica mayor; la fase se centró en la revisión de calidad (QA) y la consistencia de la documentación.
+
+### Soluciones implementadas
+- Se realizó una revisión cruzada de los archivos para asegurar que el código, el README, la guía y el artículo dijeran exactamente lo mismo respecto al alcance del proyecto.
+
+### Decisiones técnicas
+- **Dar por concluida la fase de desarrollo y pasar a la entrega oficial.**
+- Mantener en el repositorio únicamente el código final del ESP8266 para evitar confusiones al profesor evaluador.
+
+### Pruebas efectuadas
+- **Prueba de enlaces:** Verificación del README en ventana de incógnito (Exitosa).
+- **Prueba de formato:** Revisión del PDF final en formato IEEE de dos columnas (Correcto).
+- **Prueba de repositorio:** Verificación de que los archivos finales están en las carpetas correspondientes (`src`, `docs`, `arduino`).
+
+### Aprendizajes obtenidos
+- La importancia de la gestión de versiones y la documentación constante para reflejar el estado real de un proyecto de ingeniería.
+- Un proyecto no termina cuando el código funciona, sino cuando la documentación y el código están perfectamente alineados.
+
+### Próximos pasos, ya final
+- Realizar presentación final del proyecto.
