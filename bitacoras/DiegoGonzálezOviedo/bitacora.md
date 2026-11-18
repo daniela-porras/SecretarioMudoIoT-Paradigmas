@@ -103,3 +103,44 @@
 ### Próximos pasos
 - Diseñar y construir la carcasa/gabinete físico del Secretario Mudo.
 - Investigar cómo hacer peticiones HTTP (GET/POST) desde el ESP8266 hacia el servidor de Javier.
+
+## Martes 17/11/2026 (Cierre de Hardware e Integración IoT)
+
+### Actividades realizadas
+- Diseño, modelado e impresión 3D de la carcasa personalizada para el dispositivo.
+- Ensamblaje final de los componentes electrónicos (ESP8266, LCD, DHT11, encoder) dentro de la maqueta.
+- Implementación de las peticiones HTTP (POST) desde el ESP8266 hacia el servidor Flask de Javier.
+- **Subida de la fotografía oficial de la maqueta final a la carpeta `hardware` del repositorio.**
+- Revisión final del código de Arduino para la eliminación del LDR y ajuste del envío de datos.
+
+### Avances
+- **Carcasa física construida y ensamblada**, protegiendo los circuitos y facilitando su uso como dispositivo de escritorio.
+- **Comunicación exitosa entre el hardware y el software:** El ESP8266 envía los datos de temperatura, humedad y ciclos Pomodoro al backend sin problemas.
+- **La fotografía del prototipo físico ya se encuentra documentada y respaldada en la carpeta `hardware` del repositorio.**
+
+### Dificultades encontradas
+- Acomodar todo el cableado y la protoboard dentro del espacio reducido de la carcasa 3D.
+- Errores iniciales de formato en el JSON enviado por HTTP que el backend no reconocía.
+
+### Soluciones implementadas
+- Se ajustó el diseño interno de la maqueta y se organizaron los cables para evitar cortocircuitos y falsos contactos.
+- Se utilizó la librería `ESP8266HTTPClient` y se depuró la sintaxis del JSON en el código para que coincidiera exactamente con lo que esperaba el servidor de Javier.
+
+### Decisiones técnicas
+- **Utilizar la fotografía subida a la carpeta `hardware` como la referencia visual oficial del ensamblaje.**
+- Establecer un intervalo de envío de lecturas cada 30 segundos para no saturar la base de datos SQLite.
+- Confirmar la versión final del firmware sin el código del LDR.
+
+### Pruebas efectuadas
+- **Prueba de ensamble físico:** Todo el hardware encaja y funciona correctamente dentro de la carcasa impresa.
+- **Prueba de integración IoT:** El LED RGB, el buzzer, la pantalla LCD y el envío HTTP funcionan en conjunto sin reinicios.
+- Verificación de recepción de datos en el panel web (Frontend de Daniela) en tiempo real.
+
+### Aprendizajes obtenidos
+- Aprendí a conectar el diseño físico (modelado 3D) con la programación de microcontroladores.
+- Comprendí a fondo cómo funciona una API REST y cómo estructurar peticiones HTTP desde un dispositivo IoT.
+
+### Próximos pasos
+- Dar por concluida la fase de desarrollo de hardware.
+- Apoyar en la revisión final de la documentación y el README para la entrega del proyecto.
+- 
